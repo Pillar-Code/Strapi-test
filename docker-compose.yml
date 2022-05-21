@@ -1,0 +1,17 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+  strapi_db:
+    image: postgres
+    container_name: strap
+    environment:
+      POSTGRES_USER: strapi
+      POSTGRES_PASSWORD: strapi
+      POSTGRES_DB: strapi
+    ports:
+      - 5432:5432
+    deploy:
+      resources:
+        limits:
+          memory: 512M
